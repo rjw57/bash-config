@@ -12,22 +12,22 @@ function tp() {
 }
 
 COLOR_RESET=`tp op`
-COLOR_FG_0=`tp setf 0`
-COLOR_FG_1=`tp setf 1`
-COLOR_FG_2=`tp setf 2`
-COLOR_FG_3=`tp setf 3`
-COLOR_FG_4=`tp setf 4`
-COLOR_FG_5=`tp setf 5`
-COLOR_FG_6=`tp setf 6`
-COLOR_FG_7=`tp setf 7`
-COLOR_BG_0=`tp setb 0`
-COLOR_BG_1=`tp setb 1`
-COLOR_BG_2=`tp setb 2`
-COLOR_BG_3=`tp setb 3`
-COLOR_BG_4=`tp setb 4`
-COLOR_BG_5=`tp setb 5`
-COLOR_BG_6=`tp setb 6`
-COLOR_BG_7=`tp setb 7`
+COLOR_FG_0=`tp setaf 0`
+COLOR_FG_1=`tp setaf 1`
+COLOR_FG_2=`tp setaf 2`
+COLOR_FG_3=`tp setaf 3`
+COLOR_FG_4=`tp setaf 4`
+COLOR_FG_5=`tp setaf 5`
+COLOR_FG_6=`tp setaf 6`
+COLOR_FG_7=`tp setaf 7`
+COLOR_BG_0=`tp setab 0`
+COLOR_BG_1=`tp setab 1`
+COLOR_BG_2=`tp setab 2`
+COLOR_BG_3=`tp setab 3`
+COLOR_BG_4=`tp setab 4`
+COLOR_BG_5=`tp setab 5`
+COLOR_BG_6=`tp setab 6`
+COLOR_BG_7=`tp setab 7`
 
 function clear_terminfo()
 {

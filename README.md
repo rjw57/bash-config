@@ -16,6 +16,9 @@ if [ -d ~/.bash.d ]; then
   unset i
 fi
 EOF
+$ cat >~/.bash_profile <<EOF
+. ~/.bashrc
+EOF
 ```
 
 ## Conventions
