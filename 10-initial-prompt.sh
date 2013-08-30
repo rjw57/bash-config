@@ -36,7 +36,7 @@ PROMPT_COMMAND="_generate_prompt"
 
 # We need to define this here because COLOR_{...} goes away after this file is
 # sourced.
-_starting_prompt="$COLOR_FG_2\\u$COLOR_RESET@$COLOR_FG_1\\h$COLOR_RESET:$COLOR_FG_3\\w$COLOR_RESET\${_prompt_note:+ ($COLOR_FG_4\${_prompt_note}$COLOR_RESET)}\n\\$ "
+_starting_prompt="$COLOR_FG_6\\u$COLOR_RESET@$COLOR_FG_2\\h$COLOR_RESET:$COLOR_FG_3\\w$COLOR_RESET\${_prompt_note:+ ($COLOR_FG_1\${_prompt_note}$COLOR_RESET)}\n\\$ "
 
 # Set the initial command-line prompt
 function _init_prompt()
