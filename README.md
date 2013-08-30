@@ -6,7 +6,7 @@ installed in the following way:
 
 ```console
 $ git clone https://github.com/rjw57/bash-config/ ~/.bash.d
-$ cat >~/.bash <<EOF
+$ cat >~/.bashrc <<EOF
 if [ -d ~/.bash.d ]; then
   for i in ~/.bash.d/*.sh; do
     if [ -r \$i ]; then
