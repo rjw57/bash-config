@@ -18,6 +18,13 @@ fi
 EOF
 ```
 
+## Conventions
+
+As far as possible scripts should try to clear up after themselves with
+``add_clearup_function``. Some pollution is unavoidable, for example the prompt
+manipulation stuff, and in those cases try to prefix variables and functions
+which remain after coursing with ``_``.
+
 ## License
 
 Unless otherwise stated, this code is Copyright &copy; 2013 Rich Wareham.

@@ -1,7 +1,7 @@
 # Run any 'clearup' functions which have been registered
 if [ ! -z "$CLEARUP" ]; then
-	for c in $CLEARUP; do
-		$c
+	for _c in $CLEARUP; do
+		$_c
 	done
-	unset c
+	unset _c
 fi
