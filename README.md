@@ -6,7 +6,7 @@ installed in the following way:
 
 ```console
 $ git clone https://github.com/rjw57/bash-config/ ~/.bash.d
-$ cat >~/.bashrc <<EOF
+$ cat >>~/.bashrc <<EOF
 if [ -d ~/.bash.d ]; then
   for i in ~/.bash.d/*.sh; do
     if [ -r \$i ]; then
@@ -16,7 +16,7 @@ if [ -d ~/.bash.d ]; then
   unset i
 fi
 EOF
-$ cat >~/.bash_profile <<EOF
+$ cat >>~/.bash_profile <<EOF
 . ~/.bashrc
 EOF
 ```
