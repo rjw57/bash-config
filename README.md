@@ -26,7 +26,7 @@ EOF
 As far as possible scripts should try to clear up after themselves with
 ``add_clearup_function``. Some pollution is unavoidable, for example the prompt
 manipulation stuff, and in those cases try to prefix variables and functions
-which remain after coursing with ``_``.
+which remain after sourcing with ``_``.
 
 ## License
 
