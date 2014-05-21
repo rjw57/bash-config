@@ -1,3 +1,5 @@
-if [ -d "$HOME/pebble-dev/PebbleSDK-2.0-BETA5" ]; then
-	export PATH="$HOME/pebble-dev/PebbleSDK-2.0-BETA5/bin:$PATH"
-fi
+for pebble_dir in "$HOME/sdk/"PebbleSDK-*; do
+  if [ -d "$pebble_dir/bin" ]; then
+    export PATH="$pebble_dir/bin:$PATH"
+  fi
+done
