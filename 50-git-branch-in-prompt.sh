@@ -1,7 +1,7 @@
 # Add '(branch)' *before* prompt
 function _git_branch_prompt()
 {
-	_rev_name=`git name-rev --name-only HEAD 2>/dev/null`
+	_rev_name=`git rev-parse --abbrev-ref HEAD 2>/dev/null`
 	if [ $? -eq 0 ]; then
 		_add_prompt_note "$_rev_name"
 	fi
