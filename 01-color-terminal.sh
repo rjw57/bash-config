@@ -7,6 +7,10 @@ case "$TERM" in
   rxvt*)
     _colortermtype=rxvt
     ;;
+  xterm*)
+    COLORTERM=xterm-256color
+    _colortermtype=xterm
+    ;;
   *)
     _colortermtype=xterm
     ;;
