@@ -3,6 +3,7 @@
 case "$TERM" in
   screen*)
     _colortermtype=screen
+    COLORTERM=screen-256color
     ;;
   rxvt*)
     _colortermtype=rxvt
