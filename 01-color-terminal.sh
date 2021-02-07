@@ -12,6 +12,9 @@ case "$TERM" in
     COLORTERM=xterm-256color
     _colortermtype=xterm
     ;;
+  linux)
+    COLORTERM=
+    ;;
   *)
     _colortermtype=xterm
     ;;
