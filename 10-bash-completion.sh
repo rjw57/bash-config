@@ -8,3 +8,6 @@ if [ ! -z "`which brew 2>/dev/null`" ]; then
   . $(brew --prefix)/etc/bash_completion
   fi
 fi
+
+# Support bash-completion@2 in homebrew
+[[ -r "$HOMEBREW_PREFIX/etc/profile.d/bash_completion.sh" ]] && . "$HOMEBREW_PREFIX/etc/profile.d/bash_completion.sh"
