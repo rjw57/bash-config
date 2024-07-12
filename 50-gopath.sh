@@ -13,3 +13,8 @@ if [ -d "$HOME/projects/gocode" ]; then
 		export PATH=$GOPATH/bin:$PATH
 	fi
 fi
+
+# If ~/go/bin exists, add it to the path
+if [ -d "$HOME/go/bin" ]; then
+  export PATH=$HOME/go/bin:$PATH
+fi
