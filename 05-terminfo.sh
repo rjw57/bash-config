@@ -6,8 +6,8 @@
 # any of the variables defined in this file could be the empty string and our
 # bash config will work just as well.
 function tp() {
-	if [ ! -z "`which tput`" ]; then
-		tput $* 2>/dev/null
+  if [ ! -z "$(which tput 2>/dev/null)" ]; then
+		tput "$@" 2>/dev/null
 	fi
 }
 

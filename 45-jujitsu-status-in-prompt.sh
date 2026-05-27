@@ -4,8 +4,17 @@ function _in_jujistu_repo() {
   if [ -z "$(which jj 2>/dev/null)" ]; then
     return 1
   fi
-  if [ -z "$(jj root --ignore-working-copy 2>/dev/null)" ]; then
+  if [ -z "$(jj root --ignore-working-copy --no-integrate-operation 2>/dev/null)" ]; then
     return 2
   fi
   return 0
 }
+
+function _jujitsu_status_in_prompt() {
+  if ! _in_jujistu_repo; then
+    return 1
+  fi
+  _add_prompt_header "╭───"$'\n'"$(jj status --ignore-working-copy --no-integrate-operation --color=always | sed -e "s/^/│ /")"
+}
+
+add_prompt_function _jujitsu_status_in_prompt

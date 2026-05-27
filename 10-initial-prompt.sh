@@ -7,6 +7,8 @@
 #
 # If all you want to do is add a '(...)' to the end of the prompt, call
 # _add_prompt_note with the string to append (excluding brackets.)
+#
+# If you want to add some content before the prompt, use _add_prompt_header.
 
 # Use underscores because this will have to, unfortunately, stay defined.
 function _generate_prompt()
@@ -32,6 +34,11 @@ function _add_prompt_note()
 	_prompt_note="${_prompt_note:+$_prompt_note }$*"
 }
 
+function _add_prompt_header()
+{
+	_prompt_header="${_prompt_header:+$_prompt_header }$*"$'\n'
+}
+
 # Initially there are no prompt functions
 _PROMPT_FUNCTIONS=""
 
@@ -40,12 +47,13 @@ PROMPT_COMMAND="_generate_prompt"
 
 # We need to define this here because COLOR_{...} goes away after this file is
 # sourced.
-PS1="$COLOR_FG_6\\u$COLOR_RESET@$COLOR_FG_2\\h$COLOR_RESET:$COLOR_FG_3\\W$COLOR_RESET\${_prompt_note:+ ($COLOR_FG_1\$_prompt_note$COLOR_RESET)}\n\\$ "
+PS1="\$_prompt_header$COLOR_FG_6\\u$COLOR_RESET@$COLOR_FG_2\\h$COLOR_RESET:$COLOR_FG_3\\W$COLOR_RESET\${_prompt_note:+ ($COLOR_FG_1\$_prompt_note$COLOR_RESET)}\n\\$ "
 
 # Set the initial command-line prompt
 function _init_prompt()
 {
 	_prompt_note=""
+  _prompt_header=""
 }
 add_prompt_function _init_prompt
 
