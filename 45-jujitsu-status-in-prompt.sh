@@ -14,7 +14,7 @@ function _jujitsu_status_in_prompt() {
   if ! _in_jujistu_repo; then
     return 1
   fi
-  _add_prompt_header "╭───"$'\n'"$(jj status --ignore-working-copy --no-integrate-operation --color=always | sed -e "s/^/│ /")"
+  _add_prompt_header "╭───"$'\n'"$(jj status --no-integrate-operation --color=always | sed -e "s/^/│ /")"
 }
 
 add_prompt_function _jujitsu_status_in_prompt
