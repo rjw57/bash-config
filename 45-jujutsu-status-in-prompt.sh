@@ -19,7 +19,11 @@ function _jujutsu_status_in_prompt() {
   #_add_prompt_header "╭───"$'\n'"$(jj status --no-integrate-operation --color=always | sed -e "s/^/│ /")"
 
   # Show nearest bookmark.
-  _add_prompt_note "jj: $(jj log --color never --limit 1 --no-graph --revision '::@ & bookmarks()' --template 'join(", ", bookmarks)')"
+  _jj_bookmark="$(jj log --color never --limit 1 --no-graph --revision '::@ & bookmarks()' --template 'join(", ", bookmarks)')"
+  if [ ! -z "${_jj_bookmark}" ]; then
+    _add_prompt_note "jj: ${_jj_bookmark}"
+  fi
+  unset _jj_bookmark
 }
 
 add_prompt_function _jujutsu_status_in_prompt
