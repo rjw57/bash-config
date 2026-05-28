@@ -9,7 +9,7 @@ function _git_branch_prompt()
   fi
   _rev_name=$(git rev-parse --abbrev-ref HEAD 2>/dev/null)
 	if [ $? -eq 0 ]; then
-		_add_prompt_note "$_rev_name"
+		_add_prompt_note "git: $_rev_name"
 	fi
 	unset _rev_name
 }

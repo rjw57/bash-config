@@ -14,7 +14,12 @@ function _jujutsu_status_in_prompt() {
   if ! _in_jujistu_repo; then
     return 1
   fi
-  _add_prompt_header "╭───"$'\n'"$(jj status --no-integrate-operation --color=always | sed -e "s/^/│ /")"
+
+  # Show status
+  #_add_prompt_header "╭───"$'\n'"$(jj status --no-integrate-operation --color=always | sed -e "s/^/│ /")"
+
+  # Show nearest bookmark.
+  _add_prompt_note "jj: $(jj log --color never --limit 1 --no-graph --revision '::@ & bookmarks()' --template 'join(", ", bookmarks)')"
 }
 
 add_prompt_function _jujutsu_status_in_prompt
